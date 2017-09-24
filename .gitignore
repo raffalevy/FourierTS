@@ -1,0 +1,6 @@
+/app.js
+/app.js.map
+/public/ts/*.js
+/public/ts/*.js.map
+/node_modules
+/.idea/

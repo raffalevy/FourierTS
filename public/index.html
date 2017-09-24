@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright 2017 Raffa Levy
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="lib/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script>-->
+    <title>Fourier Interactive</title>
+</head>
+<body>
+<h1>Fourier Transform Calculator</h1>
+
+<div id='intro' class="textcontent">
+    <p>This page calculates the <a href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform">discrete fourier
+        transform</a> of a data set according to the following equation:
+    <p><img src="eq.pdf" id="eq" onerror="this.src = 'eq.png'">
+    <p>In the first box, type the time samples (<em>x</em>) separated by spaces. The resulting fourier series
+        (<em>X</em>) will appear in the second box. In the third box, the corresponding function to the calculated
+        Fourier series will appear.
+</div>
+
+<table>
+    <tr>
+        <th>Time Values</th>
+        <th>Fourier Series</th>
+        <th>Corresponding Function</th>
+    </tr>
+    <tr>
+        <td><textarea id="input" title="Time Values"></textarea></td>
+        <td><textarea id="output" title="Fourier Series" contenteditable="false"></textarea></td>
+        <td><textarea id="func" title="Corresponding Function" contenteditable="false"></textarea></td>
+    </tr>
+</table>
+
+<footer>
+    <small>Copyright &copy; 2017 Raffa Levy</small>
+</footer>
+
+<script src="lib/math.min.js"></script>
+<script src="ts/fourier.js"></script>
+</body>
+</html>
+<!--$$X_k = \frac{1}{N}\sum_{n=0}^{N-1} x_n \cdot e^{-2\pi ikn/N}$$-->

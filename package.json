@@ -1,0 +1,14 @@
+{
+  "name": "FourierTS",
+  "version": "0.0.1",
+  "dependencies": {
+    "@types/express": "^4.0.37",
+    "@types/mathjs": "0.0.35",
+    "@types/node": "^8.0.30",
+    "express": "^4.15.4",
+    "typescript": "^2.5.2"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
