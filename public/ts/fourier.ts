@@ -87,3 +87,15 @@ inputArea.addEventListener('input', ev => {
     }
 
 });
+
+const outputCanvas = <HTMLCanvasElement>document.getElementById('outputchart');
+const ctx = outputCanvas.getContext('2d');
+const outputChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            data: [12, 19, 3, 5, 2, 3]
+        }]
+    }
+});
